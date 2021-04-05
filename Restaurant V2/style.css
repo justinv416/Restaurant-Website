@@ -1,0 +1,382 @@
+/* Root */
+:root {
+    --metallic-gold: #D4AF37;	
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;}
+
+/* Nav */
+
+.nav-container {
+    margin: 0 auto;
+    width: 80vw;
+}
+
+
+.navbar {
+    /* background-color: rgba(0,0,0,0); */
+    transition: background-color .5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    padding: 0 0 0 1em;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-link:visited {
+    color: white;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item {
+    padding: 1em;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: burlywood;
+    transition: width .3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.nav-link:visited {
+    color: white;
+}
+
+/* Hamburger */
+
+.hamburger-icon {
+    margin: 0 1em 0 0;
+    background-color: transparent;
+    height: 50px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    /* display: flex; */
+}
+
+/* Middle Line */
+
+.line {
+    position: relative;
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Top & Bottom Line */
+
+.line::before,
+.line::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 5px;
+    background: inherit;
+}
+
+.line::after {
+    top: 10px;
+}
+
+/* Mobile Nav */
+
+.mobile-nav {
+    background: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav-list {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.mobile-nav-item {
+    font-size: 3rem;
+}
+
+.mobile-nav-link {
+    text-decoration: none;
+}
+
+.mobile-nav-link:visited {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hero */
+.header {
+    background-image: url(/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-blend-mode: darken;
+}
+
+.header-overlay {
+    background: rgba(0,0,0,0.5);
+    height: inherit;
+}
+
+.heading {
+    color: white;
+    font-size: 7vw;
+    text-shadow: 3px 3px black;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    justify-content: center;
+}
+
+.sub-heading-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-heading {
+    color: white;
+    padding: 10px;
+    text-shadow: 2px 2px black;
+}
+
+.logo-image {
+    height: 12rem;
+}
+
+.btn-reservation {
+    color: white;
+    background-color: transparent;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px black;
+    border: 2px solid white;
+}
+
+/* Menu */
+
+.menu {
+    height: auto;
+    background-color: wheat;
+}
+
+.underline {
+    background: black;
+    width: 80%;
+    height: 2px;
+}
+
+.entrees-container, 
+.sides-container, 
+.desserts-container,
+.drinks-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: auto;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.entrees-heading, 
+.sides-heading,
+.desserts-heading, 
+.drinks-heading {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    text-shadow: 2px 2px black;
+    padding: 1rem;
+    color: var(--metallic-gold);
+}
+
+.entree-item, 
+.sides-item,
+.dessert-item, 
+.drinks-item {
+    padding: 2rem;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item-heading {
+    margin-bottom: 1rem;
+}
+
+/* About */
+
+.about {
+    height: 100vh;
+    background: url(img/michael-browning-MtqG1lWcUw0-unsplash.jpg);
+    background-size: cover;
+    filter: grayscale();
+}
+
+.about-overlay {
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.about-heading {
+    color: white;
+    font-size: 3rem;
+}
+
+.about-content {
+    color: white;
+    width: 80%;
+}
+
+.test {
+    height: 50vh;
+    background-color: rosybrown;
+}
+
+/* Reservation */
+
+.reservation {
+    background-color: wheat;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-name,
+.input-email,
+.input-date,
+.input-time,
+.input-people {
+    margin: 5px;
+}
+
+/* Footer */
+
+.footer {
+    height: 50vh;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-container {
+
+}
+
+.social-link {
+    height: 2rem;
+    color: royalblue;
+}
+
+.location-list {
+    list-style-type: none;
+}
+
+.links-list {
+    list-style-type: none;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+
+
+    .hamburger-icon {
+        display: flex;
+    }
+
+    .header {
+        background-position: bottom;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+    .about,
+    .about-overlay {
+        height: auto
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+
+
+/*
+TODO:
+
+1. Build hamburger menu.
+
+*/
